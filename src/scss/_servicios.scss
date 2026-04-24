@@ -1,0 +1,98 @@
+@use "variables" as *;
+
+.servicios-grid {
+    display: grid;
+    gap: 22px;
+
+    .servicio-bloque {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+        gap: 22px;
+        align-items: stretch;
+        overflow: hidden;
+
+        .servicio-imagenes {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            background-color: $color-superficie-suave;
+
+            img {
+                width: 100%;
+                height: 100%;
+                min-height: 280px;
+                object-fit: contain;
+                padding: 18px;
+            }
+        }
+
+        .servicio-contenido {
+            padding: 30px;
+
+            h2 {
+                margin: 0 0 12px;
+                color: $color-titulo;
+                font-size: clamp(1.6rem, 2.6vw, 2.3rem);
+            }
+
+            p {
+                margin: 0 0 18px;
+                color: $color-texto-suave;
+                line-height: 1.6;
+            }
+        }
+
+        &.servicio-metalurgica {
+            grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+        }
+
+        .servicio-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            background-color: $color-superficie-suave;
+
+            img {
+                width: min(100%, 420px);
+                height: auto;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .servicios-grid .servicio-bloque,
+    .servicios-grid .servicio-bloque.servicio-metalurgica {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: $breakpoint-mobile) {
+    .servicios-grid .servicio-bloque {
+        .servicio-contenido {
+            padding: 20px;
+
+            h2 {
+                font-size: clamp(1.5rem, 7vw, 2rem);
+            }
+        }
+
+        .servicio-imagenes {
+            grid-template-columns: 1fr;
+
+            img {
+                min-height: 250px;
+                max-height: 340px;
+                padding: 16px;
+            }
+        }
+
+        .servicio-logo {
+            padding: 20px;
+
+            img {
+                width: min(100%, 340px);
+            }
+        }
+    }
+}

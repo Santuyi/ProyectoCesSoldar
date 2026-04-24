@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ces Soldar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./asset/style.css">
+</head>
+<body>
+    <header class="barra-superior">
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid contenedor-nav">
+                <a class="navbar-brand logo-navbar" href="./index.html" aria-label="Ir al inicio de Ces Soldar">
+                    <img src="./asset/img/LogoCesSoldar.png" alt="Logo de Ces Soldar">
+                </a>
+                <button class="navbar-toggler boton-navbar" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu de navegacion">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse menu-superior" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto align-items-md-center">
+                        <li class="nav-item"><a class="nav-link link-menu active" href="./index.html">INICIO</a></li>
+                        <li class="nav-item"><a class="nav-link link-menu" href="./pages/productos.html">PRODUCTOS</a></li>
+                        <li class="nav-item"><a class="nav-link link-menu" href="./pages/servicios.html">SERVICIOS</a></li>
+                        <li class="nav-item"><a class="nav-link link-menu" href="./pages/ubicacion.html">UBICACION</a></li>
+                        <li class="nav-item"><a class="nav-link link-menu" href="./pages/contactos.html">CONTACTOS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="carrusel">
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./asset/img/ImagenDeArc.jpg" class="d-block w-100" alt="Soldadura con arco">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="./asset/img/Parker.jpg" class="d-block w-100" alt="Productos Parker">
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="./asset/img/Rmbjpg.jpg" class="d-block w-100" alt="Productos de soldadura">
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+
+        <section class="presentacion">
+            <div class="presentacion-texto">
+                <span class="eyebrow">CES SOLDAR</span>
+                <h1>Insumos, equipos y accesorios para soldadura</h1>
+                <p>Trabajamos con productos para taller, industria y uso profesional, con atencion personalizada para ayudarte a elegir lo que necesitas.</p>
+                <div class="presentacion-acciones">
+                    <a href="./pages/productos.html">Ver productos</a>
+                    <a class="secundario" href="./pages/contactos.html">Hacer consulta</a>
+                </div>
+            </div>
+
+            <div class="presentacion-marcas">
+                <span>Marcas y categorias destacadas</span>
+                <ul>
+                    <li>Parker</li>
+                    <li>RMB</li>
+                    <li>Dogo</li>
+                    <li>Libus</li>
+                    <li>Accesorios MIG</li>
+                    <li>Seguridad industrial</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="productos destacados">
+            <div class="seccion-titulo">
+                <span class="eyebrow">PRODUCTOS</span>
+                <h2>Lo mas buscado</h2>
+                <p>Una seleccion pensada para mostrar rapido lo que mas se mueve en el rubro.</p>
+            </div>
+
+            <div class="grilla-productos">
+                <article class="producto">
+                    <img src="./asset/img/MaquinaDeSoldar.png" alt="Maquina de soldar">
+                    <h3>Maquinas de soldar</h3>
+                    <p>Equipos para trabajo profesional, taller y tareas de uso intensivo.</p>
+                </article>
+
+                <article class="producto">
+                    <img src="./asset/img/AlambreRmb.png" alt="Alambre RMB">
+                    <h3>Alambres y electrodos</h3>
+                    <p>Insumos para distintos tipos de soldadura y trabajos de precision.</p>
+                </article>
+
+                <article class="producto">
+                    <img src="./asset/img/Toberas.png" alt="Toberas para soldadura">
+                    <h3>Accesorios MIG</h3>
+                    <p>Picos, toberas, difusores y repuestos para mantener el equipo listo.</p>
+                </article>
+
+                <article class="producto">
+                    <img src="./asset/img/GuanteSoldador.png" alt="Guante de soldador">
+                    <h3>Seguridad industrial</h3>
+                    <p>Elementos de proteccion para trabajar con seguridad y comodidad.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="categorias">
+            <div class="seccion-titulo">
+                <span class="eyebrow">CATEGORIAS</span>
+                <h2>Todo para equipar tu trabajo</h2>
+            </div>
+
+            <div class="grilla-categorias">
+                <article class="categoria">
+                    <img src="./asset/img/Disco115.png" alt="Disco de corte 115">
+                    <h3>Discos de corte</h3>
+                </article>
+
+                <article class="categoria">
+                    <img src="./asset/img/AntreojosLibus.png" alt="Proteccion visual">
+                    <h3>Proteccion visual</h3>
+                </article>
+
+                <article class="categoria">
+                    <img src="./asset/img/Difusores.png" alt="Consumibles de soldadura">
+                    <h3>Consumibles</h3>
+                </article>
+
+                <article class="categoria">
+                    <img src="./asset/img/GuanteVaqueta.png" alt="Guante de vaqueta">
+                    <h3>Guantes</h3>
+                </article>
+            </div>
+        </section>
+
+        <section class="metalurgica-home">
+            <div class="metalurgica-logo">
+                <img src="./asset/img/LogoMetalurgica.png" alt="Logo de Metalurgica Gomez">
+            </div>
+
+            <div class="metalurgica-contenido">
+                <span class="eyebrow">METALURGICA</span>
+                <h2>Tambien realizamos trabajos metalurgicos</h2>
+                <p>Sumamos soluciones para plegados, arreglos en el campo, trabajos para galpones y fabricaciones a medida.</p>
+                <ul class="lista-servicios">
+                    <li>Plegados y trabajos a medida</li>
+                    <li>Arreglos y reparaciones en campo</li>
+                    <li>Trabajos para galpones y estructuras</li>
+                    <li>Soluciones metalurgicas segun necesidad</li>
+                </ul>
+                <a href="./pages/servicios.html">Ver servicios</a>
+            </div>
+        </section>
+
+        <section class="ventajas">
+            <div class="seccion-titulo">
+                <span class="eyebrow">POR QUE ELEGIRNOS</span>
+                <h2>Atencion directa y productos pensados para el oficio</h2>
+            </div>
+
+            <div class="grilla-ventajas">
+                <article class="ventaja">
+                    <h3>Asesoramiento real</h3>
+                    <p>Te ayudamos a encontrar el producto adecuado segun el trabajo que tengas que hacer.</p>
+                </article>
+
+                <article class="ventaja">
+                    <h3>Calidad en insumos</h3>
+                    <p>Seleccionamos productos que respondan bien en uso diario y trabajo profesional.</p>
+                </article>
+
+                <article class="ventaja">
+                    <h3>Variedad de rubros</h3>
+                    <p>Maquinas, accesorios, repuestos y seguridad industrial en un mismo lugar.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="bloque-contacto">
+            <div>
+                <span class="eyebrow">CONTACTO</span>
+                <h2>Hace tu consulta y te ayudamos a encontrar lo que necesitas</h2>
+                <p>Consulta por stock, marcas disponibles y productos para tu trabajo.</p>
+            </div>
+            <a href="./pages/contactos.html">Ir a contacto</a>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <h2>Ces Soldar</h2>
+        <p>Equipos, insumos y accesorios para soldadura.</p>
+        <div class="pie-redes">
+            <a class="icono-red icono-whatsapp" href="https://wa.me/543585417530" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp de Ces Soldar">W</a>
+            <a class="icono-red icono-instagram" href="https://www.instagram.com/ces.soldar/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Ces Soldar">IG</a>
+            <a class="icono-red icono-facebook" href="https://www.facebook.com/profile.php?id=100093023371583" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Ces Soldar">f</a>
+        </div>
+        <nav>
+            <a href="./index.html">Inicio</a>
+            <a href="./pages/productos.html">Productos</a>
+            <a href="./pages/servicios.html">Servicios</a>
+            <a href="./pages/ubicacion.html">Ubicacion</a>
+            <a href="./pages/contactos.html">Contacto</a>
+        </nav>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+@use "variables" as *;
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+
+    .contacto-card {
+        padding: 28px;
+
+        h2 {
+            margin: 0 0 12px;
+            color: $color-titulo;
+            font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+        }
+
+        p {
+            margin: 0;
+            color: $color-texto-suave;
+            line-height: 1.6;
+        }
+
+        &.contacto-intro {
+            background: linear-gradient(180deg, #ffffff, #f6f9fd);
+        }
+
+        &.contacto-datos {
+            display: grid;
+            gap: 16px;
+        }
+    }
+}
+
+.item-contacto {
+    padding: 16px;
+    background-color: $color-superficie-suave;
+    border-radius: $radio;
+
+    h3 {
+        margin: 0 0 8px;
+        color: $color-titulo;
+        font-size: 1.05rem;
+    }
+
+    p {
+        margin: 0;
+        color: $color-texto-suave;
+        line-height: 1.6;
+    }
+
+    &.item-contacto-red {
+        display: grid;
+        grid-template-columns: 44px 1fr;
+        align-items: center;
+        gap: 14px;
+    }
+}
+
+.icono-red {
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $radio;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.icono-whatsapp {
+    background-color: #25d366;
+}
+
+.icono-facebook {
+    background-color: #1877f2;
+    font-size: 1.4rem;
+}
+
+.icono-instagram {
+    background: linear-gradient(135deg, #f58529, #dd2a7b 55%, #8134af);
+    font-size: 0.9rem;
+}
+
+.enlace-contacto {
+    color: $color-primario;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+
+    .campo {
+        display: grid;
+        gap: 8px;
+
+        label {
+            font-weight: 700;
+            color: $color-secundario;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #cfd8e6;
+            border-radius: $radio;
+            background-color: white;
+            color: $color-texto;
+        }
+
+        &.campo-ancho {
+            grid-column: 1 / -1;
+        }
+    }
+
+    button {
+        width: fit-content;
+        border: 0;
+        border-radius: $radio;
+        padding: 12px 18px;
+        background-color: $color-primario;
+        color: white;
+        font-weight: 700;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .contacto-grid,
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: $breakpoint-mobile) {
+    .contacto-grid {
+        .contacto-card {
+            padding: 20px;
+
+            h2 {
+                font-size: clamp(1.5rem, 7vw, 2rem);
+            }
+        }
+    }
+
+    .contacto-formulario {
+        padding: 20px;
+    }
+
+    .icono-red {
+        width: 40px;
+        height: 40px;
+    }
+
+    .item-contacto {
+        &.item-contacto-red {
+            grid-template-columns: 40px 1fr;
+            gap: 12px;
+        }
+    }
+
+    .formulario {
+        .campo {
+            input,
+            select,
+            textarea {
+                font-size: 16px;
+            }
+        }
+
+        button {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

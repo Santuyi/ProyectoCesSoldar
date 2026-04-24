@@ -1,0 +1,99 @@
+@use "variables" as *;
+
+.barra-superior {
+    background-color: rgba(255, 255, 255, 0.98);
+    border-bottom: 1px solid rgba(207, 219, 231, 0.9);
+    box-shadow: 0 8px 18px rgba(34, 74, 106, 0.08);
+    margin-bottom: 10px;
+
+    &.fixed-top {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+}
+
+.contenedor-nav {
+    width: min(100% - 30px, $ancho-contenido);
+    margin: 0 auto;
+    padding: 0;
+    min-height: 92px;
+}
+
+.logo-navbar img {
+    width: min(176px, 38vw);
+    height: auto;
+}
+
+.boton-navbar {
+    border: 1px solid $color-borde;
+    padding: 8px 10px;
+    border-radius: $radio;
+    background-color: white;
+
+    &:focus {
+        box-shadow: 0 0 0 0.2rem rgba(1, 1, 104, 0.15);
+    }
+}
+
+.menu-superior {
+    justify-content: flex-end;
+
+    .navbar-nav {
+        gap: 6px;
+        padding: 6px;
+        background-color: white;
+        border: 1px solid $color-borde;
+        border-radius: 999px;
+    }
+}
+
+.link-menu {
+    padding: 10px 14px;
+    color: $color-secundario;
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    border-radius: 999px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    &:hover,
+    &:focus-visible,
+    &.active {
+        color: white;
+        background-color: $color-primario;
+    }
+}
+
+@media (max-width: $breakpoint-mobile) {
+    .barra-superior {
+        margin-bottom: 8px;
+    }
+
+    .contenedor-nav {
+        width: min(100% - 20px, $ancho-contenido);
+        min-height: 76px;
+    }
+
+    .logo-navbar img {
+        width: min(154px, 46vw);
+    }
+
+    .menu-superior {
+        margin-top: 12px;
+
+        .navbar-nav {
+            gap: 8px;
+            padding: 14px;
+            border-radius: $radio;
+        }
+    }
+
+    .link-menu {
+        width: 100%;
+        padding: 12px 14px;
+        text-align: left;
+        background-color: $color-primario-suave;
+        border-radius: $radio;
+    }
+}

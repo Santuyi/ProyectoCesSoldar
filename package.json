@@ -1,0 +1,11 @@
+{
+  "name": "ces-soldar",
+  "private": true,
+  "scripts": {
+    "sass": "sass src/scss/style.scss asset/style.css",
+    "sass:watch": "sass --watch src/scss/style.scss asset/style.css"
+  },
+  "devDependencies": {
+    "sass": "^1.93.2"
+  }
+}

@@ -1,0 +1,1009 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 20px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7f9fc;
+  color: #1f2937;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+main {
+  display: grid;
+  gap: 28px;
+  padding: 24px 0 36px;
+}
+
+.presentacion,
+.productos,
+.categorias,
+.metalurgica-home,
+.ventajas,
+.bloque-contacto,
+.portada-interna,
+.chips-categorias,
+.catalogo-productos,
+.servicios-grid,
+.contacto-grid,
+.ubicacion-grid,
+.contacto-formulario,
+.mapa-seccion {
+  width: min(100% - 30px, 1200px);
+  margin: 0 auto;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #0d4d8b;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.seccion-titulo {
+  max-width: 720px;
+  margin-bottom: 18px;
+}
+.seccion-titulo h2 {
+  margin: 0 0 12px;
+  color: #173a57;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+}
+.seccion-titulo p {
+  margin: 0;
+  color: #4f6477;
+  line-height: 1.6;
+}
+
+.pie {
+  padding: 28px 20px 40px;
+  background-color: #173a57;
+  text-align: center;
+  color: white;
+}
+.pie h2 {
+  margin: 0 0 12px;
+  color: white;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+.pie p {
+  margin: 0 0 16px;
+  color: #d4dced;
+}
+.pie .pie-redes {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 0 18px;
+}
+.pie .pie-redes a {
+  text-decoration: none;
+}
+.pie nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.pie a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+.pie .icono-red {
+  color: white;
+}
+
+@media (max-width: 640px) {
+  html {
+    scroll-padding-top: 12px;
+  }
+  main {
+    gap: 22px;
+    padding-top: 18px;
+  }
+  .pie {
+    padding: 24px 14px 34px;
+  }
+  .pie nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .pie .pie-redes {
+    margin-bottom: 16px;
+  }
+  .pie a:last-child {
+    grid-column: 1/-1;
+  }
+}
+@media (max-width: 420px) {
+  .presentacion,
+  .productos,
+  .categorias,
+  .metalurgica-home,
+  .ventajas,
+  .bloque-contacto,
+  .portada-interna,
+  .chips-categorias,
+  .catalogo-productos,
+  .servicios-grid,
+  .contacto-grid,
+  .ubicacion-grid,
+  .contacto-formulario,
+  .mapa-seccion {
+    width: min(100% - 16px, 1200px);
+  }
+  .pie nav {
+    grid-template-columns: 1fr;
+  }
+  .pie a:last-child {
+    grid-column: auto;
+  }
+}
+.barra-superior {
+  background-color: rgba(255, 255, 255, 0.98);
+  border-bottom: 1px solid rgba(207, 219, 231, 0.9);
+  box-shadow: 0 8px 18px rgba(34, 74, 106, 0.08);
+  margin-bottom: 10px;
+}
+.barra-superior.fixed-top {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.contenedor-nav {
+  width: min(100% - 30px, 1200px);
+  margin: 0 auto;
+  padding: 0;
+  min-height: 92px;
+}
+
+.logo-navbar img {
+  width: min(176px, 38vw);
+  height: auto;
+}
+
+.boton-navbar {
+  border: 1px solid #d7e1eb;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background-color: white;
+}
+.boton-navbar:focus {
+  box-shadow: 0 0 0 0.2rem rgba(1, 1, 104, 0.15);
+}
+
+.menu-superior {
+  justify-content: flex-end;
+}
+.menu-superior .navbar-nav {
+  gap: 6px;
+  padding: 6px;
+  background-color: white;
+  border: 1px solid #d7e1eb;
+  border-radius: 999px;
+}
+
+.link-menu {
+  padding: 10px 14px;
+  color: #224a6a;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  border-radius: 999px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.link-menu:hover, .link-menu:focus-visible, .link-menu.active {
+  color: white;
+  background-color: #2f5f8f;
+}
+
+@media (max-width: 640px) {
+  .barra-superior {
+    margin-bottom: 8px;
+  }
+  .contenedor-nav {
+    width: min(100% - 20px, 1200px);
+    min-height: 76px;
+  }
+  .logo-navbar img {
+    width: min(154px, 46vw);
+  }
+  .menu-superior {
+    margin-top: 12px;
+  }
+  .menu-superior .navbar-nav {
+    gap: 8px;
+    padding: 14px;
+    border-radius: 8px;
+  }
+  .link-menu {
+    width: 100%;
+    padding: 12px 14px;
+    text-align: left;
+    background-color: #edf4fa;
+    border-radius: 8px;
+  }
+}
+.presentacion {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(260px, 0.9fr);
+  gap: 20px;
+  align-items: stretch;
+}
+.presentacion h1 {
+  margin: 0 0 12px;
+  color: #173a57;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+}
+.presentacion p {
+  margin: 0;
+  color: #4f6477;
+  line-height: 1.6;
+}
+
+.carrusel {
+  width: min(100% - 30px, 1200px);
+  margin: 0 auto;
+}
+.carrusel .carousel-inner {
+  border-radius: 8px;
+  overflow: hidden;
+}
+.carrusel .carousel-item img {
+  width: 100%;
+  height: clamp(320px, 45vw, 560px);
+  object-fit: cover;
+  object-position: center;
+}
+.carrusel .carousel-control-prev-icon,
+.carrusel .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.45);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.presentacion-texto,
+.presentacion-marcas,
+.producto,
+.categoria,
+.ventaja,
+.bloque-contacto,
+.metalurgica-logo,
+.metalurgica-contenido {
+  background-color: #ffffff;
+  border: 1px solid #d7e1eb;
+  border-radius: 8px;
+}
+
+.presentacion-texto {
+  padding: 32px;
+}
+
+.presentacion-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+.presentacion-acciones a {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 8px;
+  background-color: #2f5f8f;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+.presentacion-acciones .secundario {
+  background-color: #edf4fa;
+  color: #224a6a;
+}
+
+.presentacion-marcas {
+  padding: 28px 24px;
+}
+.presentacion-marcas span {
+  display: block;
+  font-weight: 700;
+  color: #173a57;
+  margin-bottom: 16px;
+}
+.presentacion-marcas ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.presentacion-marcas li {
+  padding: 12px;
+  background-color: #f4f7fb;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 700;
+  color: #28496f;
+}
+
+.grilla-productos,
+.grilla-categorias,
+.grilla-ventajas {
+  display: grid;
+  gap: 18px;
+}
+.grilla-productos.grilla-productos,
+.grilla-categorias.grilla-productos,
+.grilla-ventajas.grilla-productos {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.grilla-productos.grilla-categorias,
+.grilla-categorias.grilla-categorias,
+.grilla-ventajas.grilla-categorias {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.grilla-productos.grilla-ventajas,
+.grilla-categorias.grilla-ventajas,
+.grilla-ventajas.grilla-ventajas {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.producto {
+  overflow: hidden;
+}
+.producto img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  padding: 18px;
+  background-color: #f5f8fb;
+}
+.producto h3,
+.producto p {
+  padding-inline: 18px;
+}
+.producto h3 {
+  margin: 0 0 10px;
+  padding-top: 18px;
+  color: #173a57;
+}
+.producto p {
+  margin: 0;
+  padding-bottom: 20px;
+  color: #4f6477;
+  line-height: 1.6;
+}
+
+.categoria {
+  padding: 20px;
+  text-align: center;
+}
+.categoria img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  margin-bottom: 14px;
+}
+.categoria h3 {
+  margin: 0 0 10px;
+  color: #173a57;
+}
+
+.metalurgica-home {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+  gap: 22px;
+  align-items: stretch;
+}
+.metalurgica-home .metalurgica-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background-color: #f5f8fb;
+}
+.metalurgica-home .metalurgica-logo img {
+  width: min(100%, 420px);
+  height: auto;
+}
+.metalurgica-home .metalurgica-contenido {
+  padding: 30px;
+}
+.metalurgica-home .metalurgica-contenido h2 {
+  margin: 0 0 12px;
+  color: #173a57;
+  font-size: clamp(1.7rem, 2.8vw, 2.4rem);
+}
+.metalurgica-home .metalurgica-contenido p {
+  margin: 0 0 18px;
+  color: #4f6477;
+  line-height: 1.6;
+}
+.metalurgica-home .metalurgica-contenido a {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  background-color: #2f5f8f;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.lista-servicios {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 20px;
+  color: #28496f;
+  font-weight: 700;
+}
+
+.ventaja {
+  padding: 24px;
+}
+.ventaja h3 {
+  margin: 0 0 10px;
+  color: #173a57;
+}
+.ventaja p {
+  margin: 0;
+  color: #4f6477;
+  line-height: 1.6;
+}
+
+.bloque-contacto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 28px 30px;
+}
+.bloque-contacto h2 {
+  margin: 0 0 12px;
+  color: #173a57;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+}
+.bloque-contacto p {
+  margin: 0;
+  color: #4f6477;
+  line-height: 1.6;
+}
+.bloque-contacto a {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 8px;
+  background-color: #2f5f8f;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+@media (max-width: 980px) {
+  .presentacion,
+  .metalurgica-home,
+  .grilla-productos,
+  .grilla-categorias,
+  .grilla-ventajas,
+  .bloque-contacto {
+    grid-template-columns: 1fr;
+  }
+  .bloque-contacto {
+    display: grid;
+  }
+}
+@media (max-width: 640px) {
+  .carrusel {
+    width: min(100% - 20px, 1200px);
+  }
+  .carrusel .carousel-item img {
+    height: clamp(250px, 62vw, 360px);
+  }
+  .carrusel .carousel-control-prev-icon,
+  .carrusel .carousel-control-next-icon {
+    padding: 14px;
+  }
+  .presentacion-texto,
+  .presentacion-marcas,
+  .categoria,
+  .ventaja,
+  .bloque-contacto {
+    padding: 20px;
+  }
+  .presentacion-marcas ul {
+    grid-template-columns: 1fr;
+  }
+  .presentacion h1,
+  .seccion-titulo h2,
+  .bloque-contacto h2,
+  .metalurgica-contenido h2 {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+  }
+  .presentacion-acciones,
+  .bloque-contacto {
+    gap: 12px;
+  }
+  .presentacion-acciones a,
+  .bloque-contacto a,
+  .metalurgica-contenido a {
+    width: 100%;
+    text-align: center;
+  }
+  .producto img,
+  .categoria img {
+    padding: 16px;
+    aspect-ratio: 4/3;
+    max-height: 320px;
+  }
+  .metalurgica-home .metalurgica-logo img {
+    width: min(100%, 340px);
+  }
+}
+.portada-interna,
+.contacto-card,
+.ubicacion-card,
+.contacto-formulario,
+.mapa-placeholder,
+.tarjeta-producto,
+.servicio-bloque {
+  background-color: #ffffff;
+  border: 1px solid #d7e1eb;
+  border-radius: 8px;
+}
+
+.portada-interna {
+  padding: 34px 32px;
+}
+.portada-interna h1 {
+  margin: 0 0 12px;
+  color: #173a57;
+  font-size: clamp(1.9rem, 3vw, 2.9rem);
+}
+.portada-interna p {
+  margin: 0;
+  max-width: 700px;
+  color: #4f6477;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .portada-interna h1 {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+  }
+}
+.chips-categorias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.chips-categorias span {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background-color: #edf4fa;
+  color: #28496f;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.catalogo-productos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.catalogo-productos .tarjeta-producto {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: hidden;
+}
+.catalogo-productos .tarjeta-producto img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  padding: 20px;
+  background-color: #f5f8fb;
+}
+.catalogo-productos .tarjeta-producto h2 {
+  margin: 0;
+  color: #173a57;
+  font-size: 1.25rem;
+}
+.catalogo-productos .tarjeta-producto p {
+  margin: 0;
+  color: #4f6477;
+  line-height: 1.6;
+}
+
+.tarjeta-producto-info {
+  display: grid;
+  gap: 12px;
+  padding: 20px;
+}
+
+.categoria-producto {
+  color: #0d4d8b;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.pie-tarjeta-producto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-top: auto;
+}
+.pie-tarjeta-producto strong {
+  color: #2f5f8f;
+  font-size: 1.1rem;
+}
+.pie-tarjeta-producto button {
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 16px;
+  background-color: #2f5f8f;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 980px) {
+  .catalogo-productos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .chips-categorias {
+    gap: 8px;
+  }
+  .chips-categorias span {
+    width: 100%;
+    text-align: center;
+  }
+  .catalogo-productos {
+    grid-template-columns: 1fr;
+  }
+  .catalogo-productos .tarjeta-producto img {
+    aspect-ratio: 4/3;
+    max-height: 320px;
+  }
+  .pie-tarjeta-producto {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .tarjeta-producto-info,
+  .catalogo-productos .tarjeta-producto img {
+    padding: 16px;
+  }
+}
+.servicios-grid {
+  display: grid;
+  gap: 22px;
+}
+.servicios-grid .servicio-bloque {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 22px;
+  align-items: stretch;
+  overflow: hidden;
+}
+.servicios-grid .servicio-bloque .servicio-imagenes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  background-color: #f5f8fb;
+}
+.servicios-grid .servicio-bloque .servicio-imagenes img {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  object-fit: contain;
+  padding: 18px;
+}
+.servicios-grid .servicio-bloque .servicio-contenido {
+  padding: 30px;
+}
+.servicios-grid .servicio-bloque .servicio-contenido h2 {
+  margin: 0 0 12px;
+  color: #173a57;
+  font-size: clamp(1.6rem, 2.6vw, 2.3rem);
+}
+.servicios-grid .servicio-bloque .servicio-contenido p {
+  margin: 0 0 18px;
+  color: #4f6477;
+  line-height: 1.6;
+}
+.servicios-grid .servicio-bloque.servicio-metalurgica {
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+}
+.servicios-grid .servicio-bloque .servicio-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background-color: #f5f8fb;
+}
+.servicios-grid .servicio-bloque .servicio-logo img {
+  width: min(100%, 420px);
+  height: auto;
+}
+
+@media (max-width: 980px) {
+  .servicios-grid .servicio-bloque,
+  .servicios-grid .servicio-bloque.servicio-metalurgica {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .servicios-grid .servicio-bloque .servicio-contenido {
+    padding: 20px;
+  }
+  .servicios-grid .servicio-bloque .servicio-contenido h2 {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+  }
+  .servicios-grid .servicio-bloque .servicio-imagenes {
+    grid-template-columns: 1fr;
+  }
+  .servicios-grid .servicio-bloque .servicio-imagenes img {
+    min-height: 250px;
+    max-height: 340px;
+    padding: 16px;
+  }
+  .servicios-grid .servicio-bloque .servicio-logo {
+    padding: 20px;
+  }
+  .servicios-grid .servicio-bloque .servicio-logo img {
+    width: min(100%, 340px);
+  }
+}
+.contacto-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+.contacto-grid .contacto-card {
+  padding: 28px;
+}
+.contacto-grid .contacto-card h2 {
+  margin: 0 0 12px;
+  color: #173a57;
+  font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+}
+.contacto-grid .contacto-card p {
+  margin: 0;
+  color: #4f6477;
+  line-height: 1.6;
+}
+.contacto-grid .contacto-card.contacto-intro {
+  background: linear-gradient(180deg, #ffffff, #f6f9fd);
+}
+.contacto-grid .contacto-card.contacto-datos {
+  display: grid;
+  gap: 16px;
+}
+
+.item-contacto {
+  padding: 16px;
+  background-color: #f5f8fb;
+  border-radius: 8px;
+}
+.item-contacto h3 {
+  margin: 0 0 8px;
+  color: #173a57;
+  font-size: 1.05rem;
+}
+.item-contacto p {
+  margin: 0;
+  color: #4f6477;
+  line-height: 1.6;
+}
+.item-contacto.item-contacto-red {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  align-items: center;
+  gap: 14px;
+}
+
+.icono-red {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.icono-whatsapp {
+  background-color: #25d366;
+}
+
+.icono-facebook {
+  background-color: #1877f2;
+  font-size: 1.4rem;
+}
+
+.icono-instagram {
+  background: linear-gradient(135deg, #f58529, #dd2a7b 55%, #8134af);
+  font-size: 0.9rem;
+}
+
+.enlace-contacto {
+  color: #2f5f8f;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.formulario {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.formulario .campo {
+  display: grid;
+  gap: 8px;
+}
+.formulario .campo label {
+  font-weight: 700;
+  color: #224a6a;
+}
+.formulario .campo input,
+.formulario .campo select,
+.formulario .campo textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cfd8e6;
+  border-radius: 8px;
+  background-color: white;
+  color: #1f2937;
+}
+.formulario .campo.campo-ancho {
+  grid-column: 1/-1;
+}
+.formulario button {
+  width: fit-content;
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 18px;
+  background-color: #2f5f8f;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 980px) {
+  .contacto-grid,
+  .formulario {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .contacto-grid .contacto-card {
+    padding: 20px;
+  }
+  .contacto-grid .contacto-card h2 {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+  }
+  .contacto-formulario {
+    padding: 20px;
+  }
+  .icono-red {
+    width: 40px;
+    height: 40px;
+  }
+  .item-contacto.item-contacto-red {
+    grid-template-columns: 40px 1fr;
+    gap: 12px;
+  }
+  .formulario .campo input,
+  .formulario .campo select,
+  .formulario .campo textarea {
+    font-size: 16px;
+  }
+  .formulario button {
+    width: 100%;
+    text-align: center;
+  }
+}
+.ubicacion-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+.ubicacion-grid .ubicacion-card {
+  display: grid;
+  gap: 16px;
+  padding: 28px;
+}
+.ubicacion-grid .ubicacion-card h2 {
+  margin: 0 0 12px;
+  color: #173a57;
+  font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+}
+.ubicacion-grid .ubicacion-card p {
+  margin: 0;
+  color: #4f6477;
+  line-height: 1.6;
+}
+
+.item-contacto {
+  padding: 16px;
+  background-color: #f5f8fb;
+  border-radius: 8px;
+}
+.item-contacto h3 {
+  margin: 0 0 8px;
+  color: #173a57;
+  font-size: 1.05rem;
+}
+
+.mapa-placeholder {
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background: linear-gradient(135deg, #eef3fb, #f8fafc);
+}
+.mapa-placeholder p {
+  margin: 0;
+  color: #4f6477;
+  line-height: 1.6;
+}
+.mapa-placeholder strong {
+  display: block;
+  margin-bottom: 10px;
+  color: #173a57;
+  font-size: 1.15rem;
+}
+
+.mapa-contenido {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.8fr);
+  gap: 22px;
+}
+.mapa-contenido iframe {
+  width: 100%;
+  min-height: 360px;
+  border: 0;
+  border-radius: 8px;
+}
+
+@media (max-width: 980px) {
+  .ubicacion-grid,
+  .mapa-contenido {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .ubicacion-grid .ubicacion-card {
+    padding: 20px;
+  }
+  .ubicacion-grid .ubicacion-card h2 {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+  }
+  .mapa-placeholder {
+    padding: 20px;
+  }
+  .mapa-contenido iframe {
+    min-height: 280px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
