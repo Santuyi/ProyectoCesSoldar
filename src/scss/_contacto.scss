@@ -88,6 +88,14 @@
     font-weight: 700;
 }
 
+.contacto-formulario {
+    padding: 28px;
+
+    .seccion-titulo {
+        margin-bottom: 24px;
+    }
+}
+
 .formulario {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -113,20 +121,18 @@
             color: $color-texto;
         }
 
+        textarea {
+            min-height: 160px;
+            resize: vertical;
+        }
+
         &.campo-ancho {
             grid-column: 1 / -1;
         }
     }
 
     button {
-        width: fit-content;
-        border: 0;
-        border-radius: $radio;
-        padding: 12px 18px;
-        background-color: $color-primario;
-        color: white;
-        font-weight: 700;
-        cursor: pointer;
+        @include boton-primario();
     }
 }
 

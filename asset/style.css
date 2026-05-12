@@ -25,6 +25,26 @@ main {
   padding: 24px 0 36px;
 }
 
+.servicio-bloque,
+.tarjeta-producto,
+.mapa-placeholder,
+.contacto-formulario,
+.ubicacion-card,
+.contacto-card,
+.portada-interna,
+.metalurgica-contenido,
+.metalurgica-logo,
+.bloque-contacto,
+.ventaja,
+.categoria,
+.producto,
+.presentacion-marcas,
+.presentacion-texto {
+  background-color: #ffffff;
+  border: 1px solid #d7e1eb;
+  border-radius: 8px;
+}
+
 .presentacion,
 .productos,
 .categorias,
@@ -302,13 +322,17 @@ main {
   margin-top: 22px;
 }
 .presentacion-acciones a {
+  width: fit-content;
   display: inline-block;
   padding: 12px 18px;
+  border: 0;
   border-radius: 8px;
   background-color: #2f5f8f;
   color: white;
   text-decoration: none;
   font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 .presentacion-acciones .secundario {
   background-color: #edf4fa;
@@ -347,24 +371,23 @@ main {
   display: grid;
   gap: 18px;
 }
-.grilla-productos.grilla-productos,
-.grilla-categorias.grilla-productos,
-.grilla-ventajas.grilla-productos {
+
+.grilla-productos,
+.grilla-categorias {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
-.grilla-productos.grilla-categorias,
-.grilla-categorias.grilla-categorias,
-.grilla-ventajas.grilla-categorias {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-.grilla-productos.grilla-ventajas,
-.grilla-categorias.grilla-ventajas,
-.grilla-ventajas.grilla-ventajas {
+
+.grilla-ventajas {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .producto {
   overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.producto:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(34, 74, 106, 0.12);
 }
 .producto img {
   width: 100%;
@@ -392,6 +415,11 @@ main {
 .categoria {
   padding: 20px;
   text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.categoria:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(34, 74, 106, 0.12);
 }
 .categoria img {
   width: 100%;
@@ -435,14 +463,18 @@ main {
   line-height: 1.6;
 }
 .metalurgica-home .metalurgica-contenido a {
+  width: fit-content;
   display: inline-block;
   margin-top: 22px;
   padding: 12px 18px;
+  border: 0;
   border-radius: 8px;
   background-color: #2f5f8f;
   color: white;
   text-decoration: none;
   font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .lista-servicios {
@@ -456,6 +488,11 @@ main {
 
 .ventaja {
   padding: 24px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.ventaja:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(34, 74, 106, 0.12);
 }
 .ventaja h3 {
   margin: 0 0 10px;
@@ -485,22 +522,30 @@ main {
   line-height: 1.6;
 }
 .bloque-contacto a {
+  width: fit-content;
   display: inline-block;
   padding: 12px 18px;
+  border: 0;
   border-radius: 8px;
   background-color: #2f5f8f;
   color: white;
   text-decoration: none;
   font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 @media (max-width: 980px) {
   .presentacion,
   .metalurgica-home,
-  .grilla-productos,
-  .grilla-categorias,
-  .grilla-ventajas,
   .bloque-contacto {
+    grid-template-columns: 1fr;
+  }
+  .grilla-productos,
+  .grilla-categorias {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grilla-ventajas {
     grid-template-columns: 1fr;
   }
   .bloque-contacto {
@@ -526,6 +571,10 @@ main {
     padding: 20px;
   }
   .presentacion-marcas ul {
+    grid-template-columns: 1fr;
+  }
+  .grilla-productos,
+  .grilla-categorias {
     grid-template-columns: 1fr;
   }
   .presentacion h1,
@@ -609,6 +658,11 @@ main {
   display: grid;
   grid-template-rows: auto 1fr;
   overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.catalogo-productos .tarjeta-producto:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(34, 74, 106, 0.12);
 }
 .catalogo-productos .tarjeta-producto img {
   width: 100%;
@@ -653,13 +707,17 @@ main {
   font-size: 1.1rem;
 }
 .pie-tarjeta-producto button {
+  width: fit-content;
+  display: inline-block;
+  padding: 12px 16px;
   border: 0;
   border-radius: 8px;
-  padding: 12px 16px;
   background-color: #2f5f8f;
   color: white;
   font-weight: 700;
   cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 @media (max-width: 980px) {
@@ -850,6 +908,13 @@ main {
   font-weight: 700;
 }
 
+.contacto-formulario {
+  padding: 28px;
+}
+.contacto-formulario .seccion-titulo {
+  margin-bottom: 24px;
+}
+
 .formulario {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -873,18 +938,25 @@ main {
   background-color: white;
   color: #1f2937;
 }
+.formulario .campo textarea {
+  min-height: 160px;
+  resize: vertical;
+}
 .formulario .campo.campo-ancho {
   grid-column: 1/-1;
 }
 .formulario button {
   width: fit-content;
+  display: inline-block;
+  padding: 12px 18px;
   border: 0;
   border-radius: 8px;
-  padding: 12px 18px;
   background-color: #2f5f8f;
   color: white;
   font-weight: 700;
   cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 @media (max-width: 980px) {

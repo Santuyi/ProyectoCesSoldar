@@ -15,3 +15,32 @@ $ancho-contenido: 1200px;
 $breakpoint-tablet: 980px;
 $breakpoint-mobile: 640px;
 $breakpoint-small: 420px;
+
+%tarjeta-base {
+    background-color: $color-superficie;
+    border: 1px solid $color-borde;
+    border-radius: $radio;
+}
+
+@mixin boton-primario($ancho: fit-content) {
+    width: $ancho;
+    display: inline-block;
+    padding: 12px 18px;
+    border: 0;
+    border-radius: $radio;
+    background-color: $color-primario;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+@mixin elevacion-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px rgba(34, 74, 106, 0.12);
+    }
+}

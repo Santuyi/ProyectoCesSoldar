@@ -7,9 +7,7 @@
 .mapa-placeholder,
 .tarjeta-producto,
 .servicio-bloque {
-    background-color: $color-superficie;
-    border: 1px solid $color-borde;
-    border-radius: $radio;
+    @extend %tarjeta-base;
 }
 
 .portada-interna {
