@@ -5,13 +5,20 @@
     flex-wrap: wrap;
     gap: 10px;
 
-    span {
+    button {
         padding: 10px 14px;
+        border: 1px solid transparent;
         border-radius: 999px;
         background-color: $color-primario-suave;
         color: #28496f;
         font-weight: 700;
         font-size: 0.95rem;
+        cursor: pointer;
+    }
+
+    .chip-activo {
+        background-color: $color-primario;
+        color: white;
     }
 }
 
@@ -48,6 +55,17 @@
     }
 }
 
+.catalogo-estado {
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: 18px;
+    color: $color-texto-suave;
+    text-align: center;
+    background-color: $color-superficie-suave;
+    border: 1px solid $color-borde;
+    border-radius: $radio;
+}
+
 .tarjeta-producto-info {
     display: grid;
     gap: 12px;
@@ -80,14 +98,15 @@
 }
 
 .carrito {
-    position: fixed;
-    right: 18px;
-    bottom: 18px;
+    position: relative;
     z-index: 1100;
 }
 
 .carrito-boton {
     @include boton-primario();
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     box-shadow: 0 12px 28px rgba(23, 58, 87, 0.24);
 }
 
@@ -97,7 +116,6 @@
     justify-content: center;
     min-width: 26px;
     min-height: 26px;
-    margin-left: 8px;
     padding: 2px 7px;
     border-radius: 999px;
     background-color: white;
@@ -107,7 +125,7 @@
 .carrito-panel {
     position: absolute;
     right: 0;
-    bottom: calc(100% + 12px);
+    top: calc(100% + 12px);
     width: min(360px, calc(100vw - 36px));
     max-height: min(620px, calc(100vh - 120px));
     display: none;
@@ -226,6 +244,11 @@
 .carrito-consultar {
     @include boton-primario();
     padding: 10px 14px;
+
+    &:disabled {
+        opacity: 0.55;
+        cursor: not-allowed;
+    }
 }
 
 @media (max-width: $breakpoint-tablet) {
@@ -238,7 +261,7 @@
     .chips-categorias {
         gap: 8px;
 
-        span {
+        button {
             width: 100%;
             text-align: center;
         }
@@ -264,11 +287,11 @@
     }
 
     .carrito {
-        right: 12px;
-        bottom: 12px;
+        position: relative;
     }
 
     .carrito-panel {
+        right: -54px;
         width: calc(100vw - 24px);
     }
 

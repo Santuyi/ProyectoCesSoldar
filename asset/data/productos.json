@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "nombre": "Maquina de soldar",
+    "categoria": "Maquinas",
+    "precio": 890000,
+    "imagen": "../asset/img/MaquinaSoldarDogo.png",
+    "alt": "Maquina de soldar",
+    "descripcion": "Equipo para trabajo intensivo con muy buena respuesta en taller y uso profesional."
+  },
+  {
+    "id": 2,
+    "nombre": "Alambre RMB",
+    "categoria": "Alambres",
+    "precio": 28500,
+    "imagen": "../asset/img/AlambreRmb.png",
+    "alt": "Alambre RMB",
+    "descripcion": "Alambre pensado para soldaduras firmes, prolijas y de uso frecuente."
+  },
+  {
+    "id": 3,
+    "nombre": "Alambre Dogo",
+    "categoria": "Alambres",
+    "precio": 24900,
+    "imagen": "../asset/img/AlambreDogo.png",
+    "alt": "Alambre Dogo",
+    "descripcion": "Una opcion rendidora para trabajos exigentes y tareas de uso diario."
+  },
+  {
+    "id": 4,
+    "nombre": "Electrodo Litch",
+    "categoria": "Electrodos",
+    "precio": 19900,
+    "imagen": "../asset/img/ElectrodoLitch.png",
+    "alt": "Electrodo Litch",
+    "descripcion": "Electrodos para distintas aplicaciones con buen desempeno y terminacion."
+  },
+  {
+    "id": 5,
+    "nombre": "Toberas MIG",
+    "categoria": "Accesorios MIG",
+    "precio": 12300,
+    "imagen": "../asset/img/Toberas.png",
+    "alt": "Toberas MIG",
+    "descripcion": "Accesorio esencial para mantener un trabajo ordenado y continuo."
+  },
+  {
+    "id": 6,
+    "nombre": "Difusores MIG",
+    "categoria": "Accesorios MIG",
+    "precio": 10900,
+    "imagen": "../asset/img/Difusores.png",
+    "alt": "Difusores MIG",
+    "descripcion": "Repuesto practico para mantener el equipo funcionando de forma pareja."
+  },
+  {
+    "id": 7,
+    "nombre": "Picos de contacto",
+    "categoria": "Accesorios MIG",
+    "precio": 9800,
+    "imagen": "../asset/img/Picos.png",
+    "alt": "Picos de contacto",
+    "descripcion": "Repuesto para mejorar precision y continuidad en la salida del alambre."
+  },
+  {
+    "id": 8,
+    "nombre": "Adaptadores",
+    "categoria": "Accesorios MIG",
+    "precio": 15600,
+    "imagen": "../asset/img/Adaptadores.png",
+    "alt": "Adaptadores de soldadura",
+    "descripcion": "Piezas utiles para completar conexiones y resolver distintas configuraciones."
+  },
+  {
+    "id": 9,
+    "nombre": "Disco de corte 115",
+    "categoria": "Discos",
+    "precio": 4300,
+    "imagen": "../asset/img/Disco115.png",
+    "alt": "Disco de corte 115",
+    "descripcion": "Ideal para trabajos de corte precisos y rapidos en tareas de taller."
+  },
+  {
+    "id": 10,
+    "nombre": "Disco de corte 180",
+    "categoria": "Discos",
+    "precio": 6200,
+    "imagen": "../asset/img/Disco180.png",
+    "alt": "Disco de corte 180",
+    "descripcion": "Una medida versatil para tareas de corte mas exigentes y continuas."
+  },
+  {
+    "id": 11,
+    "nombre": "Guante de soldador",
+    "categoria": "Seguridad",
+    "precio": 18500,
+    "imagen": "../asset/img/GuanteSoldador.png",
+    "alt": "Guante de soldador",
+    "descripcion": "Proteccion reforzada para trabajo con temperatura y tareas de mayor exposicion."
+  },
+  {
+    "id": 12,
+    "nombre": "Antiparras Libus",
+    "categoria": "Seguridad",
+    "precio": 13800,
+    "imagen": "../asset/img/AntreojosLibus.png",
+    "alt": "Antiparras Libus",
+    "descripcion": "Proteccion visual comoda para taller, corte y tareas de mantenimiento."
+  }
+]
