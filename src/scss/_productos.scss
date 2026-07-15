@@ -107,6 +107,7 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    white-space: nowrap;
     box-shadow: 0 12px 28px rgba(23, 58, 87, 0.24);
 }
 
@@ -291,8 +292,12 @@
     }
 
     .carrito-panel {
-        right: -54px;
-        width: calc(100vw - 24px);
+        position: fixed;
+        top: 92px;
+        right: 12px;
+        left: 12px;
+        width: auto;
+        max-height: calc(100vh - 116px);
     }
 
     .carrito-item {
@@ -306,5 +311,25 @@
     .carrito-consultar {
         width: 100%;
         text-align: center;
+    }
+}
+
+@media (max-width: $breakpoint-small) {
+    .carrito-boton {
+        padding: 10px 12px;
+        gap: 6px;
+    }
+
+    .carrito-texto {
+        display: none;
+    }
+
+    .carrito-contador {
+        min-width: 24px;
+        min-height: 24px;
+    }
+
+    .carrito-panel {
+        top: 86px;
     }
 }

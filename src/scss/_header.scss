@@ -67,17 +67,25 @@
 }
 
 @media (max-width: 767px) {
+    .contenedor-nav {
+        align-items: center;
+    }
+
     .logo-navbar {
         order: 1;
+        flex: 0 1 auto;
     }
 
     .carrito {
         order: 2;
+        flex: 0 0 auto;
         margin-left: auto;
     }
 
     .boton-navbar {
         order: 3;
+        flex: 0 0 auto;
+        margin-left: 0;
     }
 
     .menu-superior {
@@ -112,10 +120,21 @@
     }
 
     .logo-navbar img {
-        width: min(154px, 46vw);
+        width: min(124px, 34vw);
     }
 
     .menu-superior {
         margin-top: 12px;
+    }
+}
+
+@media (max-width: $breakpoint-small) {
+    .contenedor-nav {
+        width: min(100% - 16px, $ancho-contenido);
+        gap: 6px;
+    }
+
+    .logo-navbar img {
+        width: min(112px, 32vw);
     }
 }
